@@ -17,4 +17,3 @@ class TwitchCli < Formula
     system "#{bin}/twitch", "version"
   end
 end
-  
