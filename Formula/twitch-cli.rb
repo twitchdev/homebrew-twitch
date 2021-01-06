@@ -5,6 +5,13 @@ class TwitchCli < Formula
   sha256 "a0aeaadf147f66d072bc6692b7c15141d4b4e2df065b3db6e14e3b2048864b53"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/twitchdev/homebrew-twitch/releases/download/twitch-cli-0.1.0"
+    cellar :any_skip_relocation
+    sha256 "63c018e76da21a6736c18b23877b1edf35edfef6c8d90b7fc2fcef5e894efd73" => :catalina
+    sha256 "7797ffe0e14bdd1e249136e2e670ae0a91c08417463ae88102622302d0a54b26" => :x86_64_linux
+  end
+
   depends_on "go" => :build
 
   def install
