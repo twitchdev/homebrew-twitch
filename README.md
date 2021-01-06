@@ -1,0 +1,9 @@
+# Twitchdev Twitch
+
+## How do I install these formulae?
+`brew install twitchdev/twitch/<formula>`
+
+Or `brew tap twitchdev/twitch` and then `brew install <formula>`.
+
+## Documentation
+`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
