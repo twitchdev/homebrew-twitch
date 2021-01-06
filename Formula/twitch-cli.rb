@@ -6,10 +6,10 @@ class TwitchCli < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/twitchdev/homebrew-twitch/releases/download/twitch-cli-0.1.0"
+    root_url "https://github.com/twitchdev/homebrew-twitch/releases/download/twitch-cli-0.2.0"
     cellar :any_skip_relocation
-    sha256 "63c018e76da21a6736c18b23877b1edf35edfef6c8d90b7fc2fcef5e894efd73" => :catalina
-    sha256 "7797ffe0e14bdd1e249136e2e670ae0a91c08417463ae88102622302d0a54b26" => :x86_64_linux
+    sha256 "12473d344269a77cdb6f1b608d25167366675332b67de9cc4f6788d87919acc0" => :catalina
+    sha256 "048c1d66a51aed8e959c6cc2804dbb9a50f52ab700b7e56e4cdaf0cb4fe62c86" => :x86_64_linux
   end
 
   depends_on "go" => :build
