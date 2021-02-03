@@ -16,9 +16,7 @@ class TwitchCli < Formula
   end
 
   def install
-    ldflags = "-X main.buildVersion=#{version}"
-    system "go", "build", "-ldflags=#{ldflags}"
-    bin.install "twitch-cli" => "twitch"
+    bin.install "twitch"
   end
 
   test do
