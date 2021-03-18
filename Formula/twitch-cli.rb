@@ -5,17 +5,17 @@
 class TwitchCli < Formula
   desc "CLI for Twitch's developer offerings"
   homepage "https://github.com/twitchdev/twitch-cli"
-  version "0.6.0"
+  version "1.0.0"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/twitchdev/twitch-cli/releases/download/0.6.0/twitch-cli_0.6.0_Darwin_x86_64.tar.gz"
-    sha256 "8cdb077e422d9411f02bd03ee8d7cc239f8bcca162d6064b88a53c52a9a84a07"
+    url "https://github.com/twitchdev/twitch-cli/releases/download/1.0.0/twitch-cli_1.0.0_Darwin_x86_64.tar.gz"
+    sha256 "c6fc3c6663ba08b04276bc87efe3c20acb6cb816bf55933bc24137b289294a84"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/twitchdev/twitch-cli/releases/download/0.6.0/twitch-cli_0.6.0_Linux_x86_64.tar.gz"
-    sha256 "cf408e44672ffb61188ab00c6db1d83f319844c5ce55960d3da820e441ccedf5"
+    url "https://github.com/twitchdev/twitch-cli/releases/download/1.0.0/twitch-cli_1.0.0_Linux_x86_64.tar.gz"
+    sha256 "e01d3511e7b604e52abc6879bb0148d7f066fa64dea8a011f37df6309024ac6e"
   end
 
   def install
