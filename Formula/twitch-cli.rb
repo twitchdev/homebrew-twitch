@@ -36,6 +36,6 @@ class TwitchCli < Formula
     bin.install "twitch"
   end
   test do
-    system "#{bin}/twitch", "-v"
+    system "#{bin}/twitch", "version"
   end
 end
