@@ -5,21 +5,21 @@
 class TwitchCli < Formula
   desc "CLI for Twitch's developer offerings"
   homepage "https://github.com/twitchdev/twitch-cli"
-  version "1.0.1"
+  version "1.0.2"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/twitchdev/twitch-cli/releases/download/1.0.1/twitch-cli_1.0.1_Darwin_x86_64.tar.gz"
-    sha256 "766b00cf4e424848eeeaf6cd0bb08f88a5314c8834aba4a33572359d5b76b884"
+    url "https://github.com/twitchdev/twitch-cli/releases/download/1.0.2/twitch-cli_1.0.2_Darwin_x86_64.tar.gz"
+    sha256 "e25c08a9791bf2e70b153661dc04b65b5910b2a9e9089ff604398dcfbebc2c00"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/twitchdev/twitch-cli/releases/download/1.0.1/twitch-cli_1.0.1_Linux_x86_64.tar.gz"
-    sha256 "d5c10606113baef24a1cabd2f787c50268951ed5c065441d994d663dd256f858"
+    url "https://github.com/twitchdev/twitch-cli/releases/download/1.0.2/twitch-cli_1.0.2_Linux_x86_64.tar.gz"
+    sha256 "62e8c30b012f09d86b3b22771c3c9b02eba520340a0d86f56cf2c37beff50992"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/twitchdev/twitch-cli.git", tag: "1.0.1"
+    url "https://github.com/twitchdev/twitch-cli.git", tag: "1.0.2"
     depends_on "go" => :build
   end
 
