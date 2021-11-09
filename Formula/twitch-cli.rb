@@ -7,7 +7,6 @@ class TwitchCli < Formula
   homepage "https://github.com/twitchdev/twitch-cli"
   version "1.1.1"
   license "Apache-2.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/twitchdev/twitch-cli/releases/download/1.1.1/twitch-cli_1.1.1_Darwin_x86_64.tar.gz"
