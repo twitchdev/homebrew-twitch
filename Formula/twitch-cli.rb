@@ -5,50 +5,67 @@
 class TwitchCli < Formula
   desc "CLI for Twitch's developer offerings"
   homepage "https://github.com/twitchdev/twitch-cli"
-  version "1.1.2"
+  version "1.1.3"
   license "Apache-2.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.2/twitch-cli_1.1.2_Darwin_x86_64.tar.gz"
-      sha256 "897073500b1130b35dd3c858d57637991dc99c1631d56984856ba85c279ad2d1"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.3/twitch-cli_1.1.3_Darwin_x86_64.tar.gz"
+      sha256 "5a3b058b4506579d52035922f634b2e40fb9d3eba318ee4c2369dda333655ed0"
+
+      def install
+        v = version
+        if build.head?
+          v = "head"
+          ldflags = "-X main.buildVersion=#{v}"
+          system "go", "build", "-ldflags=#{ldflags}"
+          mv "twitch-cli", "twitch"
+        end
+
+        if OS.mac? && Hardware::CPU.arm?
+          ldflags = "-X main.buildVersion=#{v}"
+          system "go", "build", "-ldflags=#{ldflags}"
+          mv "twitch-cli", "twitch"
+        end
+
+        bin.install "twitch"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.2/twitch-cli_1.1.2_Linux_x86_64.tar.gz"
-      sha256 "0515a8900685dc480beba99a6a8d334d3d3386d7a1e25463cbbfa4a6026844b1"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.3/twitch-cli_1.1.3_Linux_x86_64.tar.gz"
+      sha256 "43026711109a16fd1c07ac12d37b30c62be3393d52446d16e2070ba0b085cabe"
+
+      def install
+        v = version
+        if build.head?
+          v = "head"
+          ldflags = "-X main.buildVersion=#{v}"
+          system "go", "build", "-ldflags=#{ldflags}"
+          mv "twitch-cli", "twitch"
+        end
+
+        if OS.mac? && Hardware::CPU.arm?
+          ldflags = "-X main.buildVersion=#{v}"
+          system "go", "build", "-ldflags=#{ldflags}"
+          mv "twitch-cli", "twitch"
+        end
+
+        bin.install "twitch"
+      end
     end
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/twitchdev/twitch-cli.git", tag: "v1.1.2"
+    url "https://github.com/twitchdev/twitch-cli.git", tag: "v1.1.3"
     depends_on "go" => :build
   end
 
   head "https://github.com/twitchdev/twitch-cli.git", branch: "main"
   head do
     depends_on "go" => :build
-  end
-
-  def install
-    v = version
-    if build.head?
-      v = "head"
-      ldflags = "-X main.buildVersion=#{v}"
-      system "go", "build", "-ldflags=#{ldflags}"
-      mv "twitch-cli", "twitch"
-    end
-
-    if OS.mac? && Hardware::CPU.arm?
-      ldflags = "-X main.buildVersion=#{v}"
-      system "go", "build", "-ldflags=#{ldflags}"
-      mv "twitch-cli", "twitch"
-    end
-
-    bin.install "twitch"
   end
 
   test do
