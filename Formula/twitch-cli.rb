@@ -5,13 +5,13 @@
 class TwitchCli < Formula
   desc "CLI for Twitch's developer offerings"
   homepage "https://github.com/twitchdev/twitch-cli"
-  version "1.1.5"
+  version "1.1.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.5/twitch-cli_1.1.5_Darwin_arm64.tar.gz"
-      sha256 "665a6849c50d0eae8bcc1990b5241c8c26c7a90eee2cb6474ac491b6d83c84dc"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.6/twitch-cli_1.1.6_Darwin_arm64.tar.gz"
+      sha256 "63000217f1b7b4634b897ce0a1118b750a439163a70f591ff9d46f9effae2e48"
 
       def install
         v = version
@@ -26,8 +26,8 @@ class TwitchCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.5/twitch-cli_1.1.5_Darwin_x86_64.tar.gz"
-      sha256 "2f06572a3aaf57d1f234ba0da0810a1b7734ce9221caafe6452b21e1fe656c3c"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.6/twitch-cli_1.1.6_Darwin_x86_64.tar.gz"
+      sha256 "c6ac8f32ec23645ef8f63e6decae15e26d1707f1e4c63a66caa0dfaaca036c9b"
 
       def install
         v = version
@@ -45,8 +45,8 @@ class TwitchCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.5/twitch-cli_1.1.5_Linux_x86_64.tar.gz"
-      sha256 "b944ff4f87560c5340974bd695246ef1f202d6a24f9102ba423040ba7e75ecba"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.6/twitch-cli_1.1.6_Linux_x86_64.tar.gz"
+      sha256 "5a1f9701780d3a6bd98c1e0a2aac6285be8295d56e15c88bcd08cfde84e8309d"
 
       def install
         v = version
