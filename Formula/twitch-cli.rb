@@ -5,21 +5,21 @@
 class TwitchCli < Formula
   desc "CLI for Twitch's developer offerings"
   homepage "https://github.com/twitchdev/twitch-cli"
-  version "1.1.19"
+  version "1.1.20"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.19/twitch-cli_1.1.19_Darwin_arm64.tar.gz"
-      sha256 "4d20c3c238bd570f1a8e566f99ac9c0f66137d45a27c98b5fd625fd52755ce1a"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.20/twitch-cli_1.1.20_Darwin_arm64.tar.gz"
+      sha256 "f00f89c6d03a643d84d29e535eab17317374c6dd43a0a734e160ebbfcc3c106e"
 
       def install
         bin.install "twitch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.19/twitch-cli_1.1.19_Darwin_x86_64.tar.gz"
-      sha256 "ac88012e88d3ed3995eaf830a2872ef1b6d27caaf92b00b8d412414ae1041c5f"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.20/twitch-cli_1.1.20_Darwin_x86_64.tar.gz"
+      sha256 "e0988371d86fd244c1a6c3c70c48605e97b87c89b45ed1193b88a35d44f0d5de"
 
       def install
         bin.install "twitch"
@@ -29,16 +29,16 @@ class TwitchCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.19/twitch-cli_1.1.19_Linux_arm64.tar.gz"
-      sha256 "c62065718c02a4448b736b2b383e943cf086e6cb45fe2efb6d88f4142417aa6b"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.20/twitch-cli_1.1.20_Linux_arm64.tar.gz"
+      sha256 "12c7ed550a68ea16ae59c1cccfe86d6ec83358b25174bf888b60a28a43fb5d90"
 
       def install
         bin.install "twitch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.19/twitch-cli_1.1.19_Linux_x86_64.tar.gz"
-      sha256 "747ef7f7a53addfa23651d66570fe1b1e20d05e39fbcb76f0d1cf0ab586e8b7e"
+      url "https://github.com/twitchdev/twitch-cli/releases/download/v1.1.20/twitch-cli_1.1.20_Linux_x86_64.tar.gz"
+      sha256 "feb19334aafdcda45e4d5c63586f8e1fd4c6cab7864ae6ced598a89ddfb9c2d5"
 
       def install
         bin.install "twitch"
